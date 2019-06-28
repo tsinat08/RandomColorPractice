@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class Random extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = { color:[13, 200, 250]};
+    }
     componentDidMount() {
         this.applyColor();
     }
@@ -35,15 +39,15 @@ class Random extends React.Component {
     render() {
         return (
             <div>
-            <h1 className={this.isLight() ? 'white' : 'black'}>
+                <h1 className={this.isLight() ? 'white' : 'black'}>
 
-            </h1>
+                </h1>
             </div>
-    );
+        );
     }
 }
 
 ReactDOM.render(
-<Random />,
+    <Random />,
     document.getElementById('app')
 );
